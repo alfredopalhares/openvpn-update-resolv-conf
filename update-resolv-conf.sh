@@ -17,8 +17,6 @@
 # foreign_option_3='dhcp-option DOMAIN be.bnc.ch'
 # foreign_option_4='dhcp-option DOMAIN-SEARCH bnc.local'
 
-set -e
-
 ## You might need to set the path manually here, i.e.
 RESOLVCONF=`which resolvconf`
 if [[ -z $RESOLVCONF ]]; then
