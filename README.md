@@ -12,6 +12,8 @@ This script was found on the [OpenVPN page of the Archlinux Wiki](https://wiki.a
 
 ### Usage
 
+Install [openresolv](http://roy.marples.name/projects/openresolv)
+
 Place the script in ``/etc/openvpn/update-resolv-conf.sh`` or anywhere the
 OpenVPN client can acess.
 
