@@ -20,8 +20,12 @@
 set -e
 
 ## You might need to set the path manually here, i.e.
-# RESOLVCONF=/usr/bin/resolvconf
-RESOLVCONF=$(which resolvconf)
+RESOLVCONF=`which resolvconf`
+if [[ -z $RESOLVCONF ]]; then
+  echo "Could not find the resolvconf binary, guessing it"
+  RESOLVCONF=/usr/bin/resolvconf
+fi
+
 [ -x $RESOLVCONF ] || exit 0
 
 case $script_type in
