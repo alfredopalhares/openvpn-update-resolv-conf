@@ -45,10 +45,15 @@ up)
     fi
   done
   R=""
-  for DS in $IF_DNS_SEARCH ; do
-    R="${R}search $DS
+  if [ "$IF_DNS_SEARCH" ]; then
+    R="search "
+    for DS in $IF_DNS_SEARCH ; do
+      R="${R} $DS"
+    done
+  R="${R}
 "
-  done
+  fi
+
   for NS in $IF_DNS_NAMESERVERS ; do
     R="${R}nameserver $NS
 "
