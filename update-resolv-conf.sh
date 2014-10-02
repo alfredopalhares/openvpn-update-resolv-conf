@@ -18,13 +18,7 @@
 # foreign_option_4='dhcp-option DOMAIN-SEARCH bnc.local'
 
 ## You might need to set the path manually here, i.e.
-RESOLVCONF=`which resolvconf`
-if [[ -z $RESOLVCONF ]]; then
-  echo "Could not find the resolvconf binary, guessing it"
-  RESOLVCONF=/usr/bin/resolvconf
-fi
-
-[ -x $RESOLVCONF ] || exit 0
+RESOLVCONF=/usr/bin/resolvconf
 
 case $script_type in
 
