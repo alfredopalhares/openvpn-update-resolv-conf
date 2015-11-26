@@ -27,6 +27,11 @@ down /etc/openvpn/update-resolv-conf.sh
 
 Just start your openvpn client with the command you used to do.
 
+Alternatively, if you don't want to edit your client configuration, you can add the following options to your openvpn command:
+```
+--script-security 2 --up /etc/openvpn/update-resolv-conf.sh --down /etc/openvpn/update-resolv-conf.sh
+```
+
 ### Support
 
 For bugs and another questions open a ticket in the [Isssues Page](https://github.com/masterkorp/openvpn-update-resolv-conf/issues).
