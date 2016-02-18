@@ -44,6 +44,8 @@ Licenced under GNU GPL.
 
 ### Credits
 
+2016 - WGH Added modified script to support systemd-networkd
+
 2014 - Alfredo Palhares <masterkorp@masterkorp.net>
 
 2013 - colin@daedrum.net Fixed intet name
