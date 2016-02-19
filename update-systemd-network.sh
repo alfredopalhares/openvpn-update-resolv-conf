@@ -1,9 +1,12 @@
 #!/bin/bash
 #
-# Parses DHCP options from openvpn to update resolv.conf
+# Parses DHCP options from OpenVPN and creates a temporary systemd.network
+# configuration file with DNS settings, so they will be used by
+# systemd-resolved.
+#
 # To use set as 'up' and 'down' script in your openvpn *.conf:
-# up /etc/openvpn/update-resolv-conf
-# down /etc/openvpn/update-resolv-conf
+# up /etc/openvpn/update-systemd-network
+# down /etc/openvpn/update-systemd-network
 #
 # Used snippets of resolvconf script by Thomas Hood <jdthood@yahoo.co.uk>
 # and Chris Hanson
