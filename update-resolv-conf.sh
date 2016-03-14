@@ -18,7 +18,7 @@
 # foreign_option_4='dhcp-option DOMAIN-SEARCH bnc.local'
 
 ## You might need to set the path manually here, i.e.
-RESOLVCONF=/usr/bin/resolvconf
+RESOLVCONF=$(which resolvconf)
 
 case $script_type in
 
@@ -59,3 +59,9 @@ down)
   $RESOLVCONF -d "${dev}.inet"
   ;;
 esac
+
+# Patch / jm@epiclabs.io 
+# force exit with no errors. Due to an apparent conflict with the Network Manager
+# $RESOLVCONF sometimes exits with error code 6 even though it has performed the
+# action correctly and OpenVPN shuts down.
+exit 0
