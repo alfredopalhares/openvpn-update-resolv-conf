@@ -18,7 +18,7 @@
 # foreign_option_4='dhcp-option DOMAIN-SEARCH bnc.local'
 
 ## You might need to set the path manually here, i.e.
-RESOLVCONF=$(which resolvconf)
+RESOLVCONF=$(type -p resolvconf)
 
 case $script_type in
 
