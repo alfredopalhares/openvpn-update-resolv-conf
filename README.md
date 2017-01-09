@@ -10,6 +10,10 @@ those settings.
 
 This script was found on the [OpenVPN page of the Archlinux Wiki](https://wiki.archlinux.org/index.php/Openvpn#DNS)
 
+However if you have systemd 229 or newer the better option is to use
+script from https://github.com/jonathanio/update-systemd-resolved
+which uses DBus calls instead of creating temporary *.network files.
+
 ### Usage
 
 Install [openresolv](http://roy.marples.name/projects/openresolv)
