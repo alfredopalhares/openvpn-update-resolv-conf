@@ -17,7 +17,11 @@
 # foreign_option_3='dhcp-option DOMAIN be.bnc.ch'
 # foreign_option_4='dhcp-option DOMAIN-SEARCH bnc.local'
 
-## You might need to set the path manually here, i.e.
+## The 'type' builtins will look for file in $PATH variable, so we set the
+## PATH below. You might need to directly set the path to 'resolvconf'
+## manually if it still doesn't work, i.e.
+## RESOLVCONF=/usr/sbin/resolvconf
+export PATH=$PATH:/sbin:/usr/sbin:/bin:/usr/bin
 RESOLVCONF=$(type -p resolvconf)
 
 case $script_type in
