@@ -25,15 +25,15 @@ Add the following lines to your client configuration:
 ```
 # This updates the resolvconf with dns settings
 script-security 2
-up /etc/openvpn/update-resolv-conf.sh
-down /etc/openvpn/update-resolv-conf.sh
+up /usr/bin/update-resolv-conf.sh
+down /usr/bin/update-resolv-conf.sh
 ```
 
 Just start your openvpn client with the command you used to do.
 
 Alternatively, if you don't want to edit your client configuration, you can add the following options to your openvpn command:
 ```
---script-security 2 --up /etc/openvpn/update-resolv-conf.sh --down /etc/openvpn/update-resolv-conf.sh
+--script-security 2 --up /usr/bin/update-resolv-conf.sh --down /usr/bin/update-resolv-conf.sh
 ```
 
 ### Support
