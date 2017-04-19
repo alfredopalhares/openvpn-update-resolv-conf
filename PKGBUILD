@@ -11,7 +11,7 @@ license=('GPL')
 depends=('openvpn' 'openresolv')
 makedepends=('git')
 install=openvpn-update-resolv-conf-git.install
-source=("$pkgname::git+git://github.com/masterkorp/openvpn-update-resolv-conf.git")
+source=("$pkgname::git+https://github.com/masterkorp/openvpn-update-resolv-conf.git")
 md5sums=('SKIP')
 
 pkgver() {
