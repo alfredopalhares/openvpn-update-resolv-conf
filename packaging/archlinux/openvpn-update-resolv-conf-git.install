@@ -1,0 +1,4 @@
+post_install() {
+ printf "\n Add this program to your OpenVPN config with: \nscript-security 2\nup /usr/bin/update-resolv-conf.sh\ndown /usr/bin/update-resolv-conf.sh"
+}
+
