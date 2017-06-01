@@ -2,7 +2,7 @@
 # Contributor: Grigory Sokolik <g.sokol99@g-sokol.info>
 
 pkgname=openvpn-update-resolv-conf-git
-pkgver=11.dd96841
+pkgver=32.28b600d
 pkgrel=1
 pkgdesc="This is a script to update your /etc/resolv.conf with DNS settings that come from the received push dhcp-options. Since network management is out of OpenVPN client scope, this script adds and removes the provided from those settings. This script was found on the OpenVPN page of the Archlinux Wiki"
 arch=('any')
