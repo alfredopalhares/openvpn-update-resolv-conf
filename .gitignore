@@ -1,3 +1,9 @@
 # Temporary files
 *swp
 *~
+# ArchLinux pakaging
+packaging/archlinux/*.tar.xz
+packaging/archlinux/openvpn-update-resolv-conf-git/*
+packaging/archlinux/pkg/*
+packaging/archlinux/src/*
+
