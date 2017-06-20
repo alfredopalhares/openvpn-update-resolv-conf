@@ -22,18 +22,22 @@ Place the script in ``/etc/openvpn/update-resolv-conf.sh`` or anywhere the
 OpenVPN client can acess.
 
 Add the following lines to your client configuration:
+
 ```
 # This updates the resolvconf with dns settings
+setenv PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 script-security 2
 up /etc/openvpn/update-resolv-conf.sh
 down /etc/openvpn/update-resolv-conf.sh
+down-pre
 ```
 
 Just start your openvpn client with the command you used to do.
 
 Alternatively, if you don't want to edit your client configuration, you can add the following options to your openvpn command:
+
 ```
---script-security 2 --up /etc/openvpn/update-resolv-conf.sh --down /etc/openvpn/update-resolv-conf.sh
+--setenv PATH '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin' --script-security 2 --up /etc/openvpn/update-resolv-conf.sh --down /etc/openvpn/update-resolv-conf.sh --down-pre
 ```
 
 ### Support
