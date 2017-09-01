@@ -59,7 +59,7 @@ up)
   #echo -n "$R" | $RESOLVCONF -x -p -a "${dev}"
   echo -n "$R" | $RESOLVCONF -x -a "${dev}.inet"
   ;;
-down)
+*)
   $RESOLVCONF -d "${dev}.inet"
   ;;
 esac
