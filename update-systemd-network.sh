@@ -55,6 +55,7 @@ up)
     echo '[Match]'
     echo "Name=$IFNAME"
     echo '[Network]'
+    echo 'DNSDefaultRoute=true'
     for dns in "$IF_DNS_NAMESERVERS"; do
       echo "DNS=$dns"
     done
