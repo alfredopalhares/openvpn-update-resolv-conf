@@ -55,7 +55,7 @@ up)
     echo '[Match]'
     echo "Name=$IFNAME"
     echo '[Network]'
-    for dns in "$IF_DNS_NAMESERVERS"; do
+    for dns in $IF_DNS_NAMESERVERS; do
       echo "DNS=$dns"
     done
     if [[ "$IF_DNS_SEARCH" ]]; then
